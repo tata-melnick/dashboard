@@ -1,0 +1,42 @@
+.side {
+    text-align: center;
+    width: 90px;
+    height: 100%;
+    background-color: #3a3b3c;
+    padding: 30px;
+    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    width: 96%;
+    height: 90px;
+    border-bottom: solid 2px #fff;
+    color: #ffffff;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 90px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.name {
+    font-size: 18px;
+}
+
+.job {
+    font-size: 12px;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+}
