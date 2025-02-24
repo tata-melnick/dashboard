@@ -1,13 +1,13 @@
 html,
 body {
     min-height: 100vh;
+    width: 100%;
 }
 
 body {
     margin: 0;
     font-size: 28px;
-    color: #000;
-    overflow-y: scroll;
+    color: #fff;
     background: #000;
     font-family:
         -apple-system, "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
@@ -44,4 +44,5 @@ p {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
