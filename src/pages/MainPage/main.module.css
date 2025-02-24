@@ -1,0 +1,21 @@
+.main {
+    text-align: center;
+    height: calc(100vh - 90px);
+    border-radius: 5px;
+    padding: 30px 30px 30px 40px;
+    overflow-y: scroll;
+    background-color: #000;
+}
+
+::-webkit-scrollbar {
+    height: 3px;
+    width: 10px;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3a3b3c;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px #fff;
+}
