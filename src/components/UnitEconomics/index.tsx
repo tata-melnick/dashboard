@@ -8,8 +8,15 @@ const UnitEconomics: React.FC = () => {
             <div className={styles.title}>
                 <h2>Юнит-экономика</h2>
                 <div className={styles.btnStyles}>
-                    <button className={styles.btn}>Все маркетплейсы</button>
-                    <button className={styles.btn}>за неделю</button>
+                    <button className={styles.btn}>
+                        <img src="/public/chip.png" alt="chip" />
+                        Все маркетплейсы
+                        <img src="/public/source.png" alt="chip" />
+                    </button>
+                    <button className={styles.btn}>
+                        за неделю
+                        <img src="/public/source.png" alt="chip" />
+                    </button>
                     <SettingsIcon />
                 </div>
             </div>
