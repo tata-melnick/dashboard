@@ -2,3 +2,42 @@
     height: 100%;
     width: 100%;
 }
+
+.dark {
+    --back--color: #000000;
+    --text--color: #ffffff;
+    --border--color: #ffffff;
+    --btn--back: #333335;
+    --btn--hover: #424242;
+    --btn--text: #ffffff;
+
+    --tab--back: #242526;
+    --tab--hover: #3a3b3c;
+    --tab--color: #CCCCCC;
+    --btn--arrow: #333335;
+
+    --checked--active: #dddddd;
+    --toggle--back: #3a3b3c;
+    --toggle--beffore: #ffffff;
+    --toggle--after: #000000;
+}
+
+.light {
+    --back--color: #ffffff;
+    --text--color: #000000;
+    --border--color: #ffffff;
+    --btn--back: #ffffff;
+    --btn--hover: #455ae0;
+    --btn--text: #000000;
+
+    --tab--back: #ffffff;
+    --tab--hover: #455ae0;
+    --tab--color: #8F9FAD;
+    --btn--arrow: #455ae0;
+
+
+    --checked--active: #dddddd;
+    --toggle--back: #ffffff;
+    --toggle--beffore: #DDDDDD;
+    --toggle--after: #ffffff;
+}
