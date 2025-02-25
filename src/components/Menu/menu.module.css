@@ -5,16 +5,23 @@
     gap: 10px;
 }
 
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
+.tab {
+    width: 220px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: 300ms;
 }
 
-.btn:hover {
-    background-color: #3a3b3c;
+.tab > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    width: 220px;
+    height: 60px;
+    padding: 18px;
+}
+
+.tab:hover {
+    background-color: var(--tab--hover);
 }
