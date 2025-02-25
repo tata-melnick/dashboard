@@ -1,10 +1,22 @@
 import React from "react"
+import cn from "classnames-ts"
 import styles from "./sidebar.module.css"
-import { ArrowIcon, SingInIcon } from "../../../icons"
+import {
+    ArrowIcon,
+    SingInIcon,
+    LightThemeIcon,
+    DarkThemeIcon,
+} from "../../../icons"
 import Menu from "../../../components/Menu"
 import { Link } from "react-router-dom"
 
-const Sidebar: React.FC = () => {
+interface SideBarProps {
+    changeTheme(): void
+    theme: "light" | "dark"
+}
+
+const Sidebar: React.FC<SideBarProps> = ({ changeTheme, theme }) => {
+
     return (
         <div className={styles.sideBar}>
             <button className={styles.arrow}>
@@ -12,13 +24,28 @@ const Sidebar: React.FC = () => {
             </button>
             <Menu />
             <div className={styles.wrap}>
-                <Link to="/authorization" className={styles.btn}>
-                    <SingInIcon />
+                <Link to="/authorization" className={styles.tab}>
+                    <SingInIcon /> Выйти
                 </Link>
                 <div className={styles.label}>
-                    <label className={styles.checkbox} htmlFor="checkbox">
-                        <input type="checkbox" id="checkbox" className={styles.input}/>
-                        <span className={styles.checkboxSwitch}>Light mode</span>
+                    {theme === "light" ? (
+                        <>
+                            <DarkThemeIcon />
+                            Dark mode
+                        </>
+                    ) : (
+                        <>
+                            <LightThemeIcon />
+                            Light mode
+                        </>
+                    )}
+                    <label className={cn(styles.checkbox, theme === "light" && styles.checkboxOn)} htmlFor="checkbox">
+                        <input
+                            hidden
+                            type="checkbox"
+                            id="checkbox"
+                            onChange={changeTheme}
+                        />
                     </label>
                 </div>
             </div>
