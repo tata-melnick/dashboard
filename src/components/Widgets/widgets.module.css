@@ -23,16 +23,11 @@
     height: max-content;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex: 1;
     flex-wrap: wrap;
     flex-direction: row;
-    column-gap: 15px;
-    row-gap: 15px;
-}
-
-.widgetUnit {
-    width: 425px;
-    height: 135px;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .widgets > img {

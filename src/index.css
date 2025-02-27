@@ -1,6 +1,6 @@
 html,
 body {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -44,10 +44,3 @@ h4 {
 p {
     margin: 0;
 }
-
-/*#root {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*}*/

@@ -1,7 +1,7 @@
 .header {
     position: sticky;
     height: 90px;
-    border-bottom: solid 2px  var(--border--color);
+    border-bottom: solid 2px var(--border--color);
     color: var(--text--color);
     background-color: var(--back--color);
     padding: 20px 40px;
