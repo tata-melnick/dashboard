@@ -26,7 +26,7 @@ const Menu: React.FC<IMenuProps> = ({ collapsed }) => {
                 )}
             >
                 <li>
-                    <Link to="/search" className={styles.tab}>
+                    <Link to="/" className={styles.tab}>
                         <SearchIcon />
                         <span className={styles.tabText}>Поиск...</span>
                     </Link>
@@ -38,31 +38,31 @@ const Menu: React.FC<IMenuProps> = ({ collapsed }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/stats" className={styles.tab}>
+                    <Link to="/" className={styles.tab}>
                         <StatsIcon />
                         <span className={styles.tabText}>Доходы</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/bell" className={styles.tab}>
+                    <Link to="/" className={styles.tab}>
                         <BellIcon />
                         <span className={styles.tabText}>Уведомления</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/chart-pie-alt" className={styles.tab}>
+                    <Link to="/" className={styles.tab}>
                         <ChartPieAltIcon />
                         <span className={styles.tabText}>Аналитика</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/like" className={styles.tab}>
+                    <Link to="/" className={styles.tab}>
                         <LikeIcon />
                         <span className={styles.tabText}>Избранное</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/credit-card" className={styles.tab}>
+                    <Link to="/" className={styles.tab}>
                         <CreditCardIcon />
                         <span className={styles.tabText}>Кошелёк</span>
                     </Link>
