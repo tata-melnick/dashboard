@@ -2,7 +2,11 @@ import React from "react"
 import styles from "./unitEconomics.module.css"
 import { SettingsIcon } from "../../icons"
 
-const UnitEconomics: React.FC = () => {
+interface IUnitEconomicsProps {
+    theme: "light" | "dark"
+}
+
+const UnitEconomics: React.FC<IUnitEconomicsProps> = ({ theme }) => {
     return (
         <div className={styles.wrap}>
             <div className={styles.title}>
@@ -20,27 +24,51 @@ const UnitEconomics: React.FC = () => {
                     <SettingsIcon />
                 </div>
             </div>
-            <div className={styles.widgetsUnit}>
-                <img
-                    src="/public/content/widgetUnit_1.png"
-                    alt="Notification"
-                />
+            {theme === "light" ? (
+                <div className={styles.widgetsUnit}>
+                    <img
+                        src="/content/lightTheme/widgetUnit_1.png"
+                        alt="Notification"
+                    />
 
-                <img
-                    src="/public/content/widgetUnit_2.png"
-                    alt="Notification"
-                />
+                    <img
+                        src="/content/lightTheme/widgetUnit_2.png"
+                        alt="Notification"
+                    />
 
-                <img
-                    src="/public/content/widgetUnit_3.png"
-                    alt="Notification"
-                />
+                    <img
+                        src="/content/lightTheme/widgetUnit_3.png"
+                        alt="Notification"
+                    />
 
-                <img
-                    src="/public/content/widgetUnit_4.png"
-                    alt="Notification"
-                />
-            </div>
+                    <img
+                        src="/content/lightTheme/widgetUnit_4.png"
+                        alt="Notification"
+                    />
+                </div>
+            ) : (
+                <div className={styles.widgetsUnit}>
+                    <img
+                        src="/content/darkTheme/widgetUnit_1.png"
+                        alt="Notification"
+                    />
+
+                    <img
+                        src="/content/darkTheme/widgetUnit_2.png"
+                        alt="Notification"
+                    />
+
+                    <img
+                        src="/content/darkTheme/widgetUnit_3.png"
+                        alt="Notification"
+                    />
+
+                    <img
+                        src="/content/darkTheme/widgetUnit_4.png"
+                        alt="Notification"
+                    />
+                </div>
+            )}
         </div>
     )
 }
