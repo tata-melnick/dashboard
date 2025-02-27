@@ -10,51 +10,61 @@ import {
     CreditCardIcon,
 } from "../../icons"
 import { Link } from "react-router-dom"
+import cn from "classnames-ts"
 
-const Menu: React.FC = () => {
+interface IMenuProps {
+    collapsed: boolean
+}
+
+const Menu: React.FC<IMenuProps> = ({ collapsed }) => {
     return (
         <nav>
-            <ul className={styles.list}>
-                <li className={styles.tab}>
-                    <Link to="/search">
+            <ul
+                className={cn(
+                    styles.list,
+                    collapsed && [styles.sidebarCollapsed]
+                )}
+            >
+                <li>
+                    <Link to="/search" className={styles.tab}>
                         <SearchIcon />
-                        Поиск...
+                        <span className={styles.tabText}>Поиск...</span>
                     </Link>
                 </li>
-                <li className={styles.tab}>
-                    <Link to="/">
+                <li>
+                    <Link to="/" className={styles.tab}>
                         <HomeIcon />
-                        Главная
+                        <span className={styles.tabText}>Главная</span>
                     </Link>
                 </li>
-                <li className={styles.tab}>
-                    <Link to="/stats">
+                <li>
+                    <Link to="/stats" className={styles.tab}>
                         <StatsIcon />
-                        Доходы
+                        <span className={styles.tabText}>Доходы</span>
                     </Link>
                 </li>
-                <li className={styles.tab}>
-                    <Link to="/bell">
+                <li>
+                    <Link to="/bell" className={styles.tab}>
                         <BellIcon />
-                        Уведомления
+                        <span className={styles.tabText}>Уведомления</span>
                     </Link>
                 </li>
-                <li className={styles.tab}>
-                    <Link to="/chart-pie-alt">
+                <li>
+                    <Link to="/chart-pie-alt" className={styles.tab}>
                         <ChartPieAltIcon />
-                        Аналитика
+                        <span className={styles.tabText}>Аналитика</span>
                     </Link>
                 </li>
-                <li className={styles.tab}>
-                    <Link to="/like">
+                <li>
+                    <Link to="/like" className={styles.tab}>
                         <LikeIcon />
-                        Избранное
+                        <span className={styles.tabText}>Избранное</span>
                     </Link>
                 </li>
-                <li className={styles.tab}>
-                    <Link to="/credit-card">
+                <li>
+                    <Link to="/credit-card" className={styles.tab}>
                         <CreditCardIcon />
-                        Кошелёк
+                        <span className={styles.tabText}>Кошелёк</span>
                     </Link>
                 </li>
             </ul>

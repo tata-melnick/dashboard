@@ -6,13 +6,6 @@
 }
 
 .tab {
-    width: 220px;
-    height: 60px;
-    border-radius: 10px;
-    transition: 300ms;
-}
-
-.tab > a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,8 +13,45 @@
     width: 220px;
     height: 60px;
     padding: 18px;
+    border-radius: 10px;
+    transition: 300ms;
 }
 
 .tab:hover {
     background-color: var(--tab--hover);
+}
+
+.tab > svg {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    transition: all 0.1s linear;
+}
+
+.tabText {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    transition: all 0.1s linear;
+}
+
+.sidebarCollapsed {
+    width: 60px;
+
+    .tab {
+        width: 60px;
+    }
+
+    .tab > a > svg {
+        transform: translateX(60px);
+        visibility: hidden;
+        transition: all 0.1s linear;
+    }
+
+    .tabText {
+        opacity: 0;
+        transform: translateX(-60px);
+        visibility: hidden;
+        transition: all 0.1s linear;
+    }
 }
