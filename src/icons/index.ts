@@ -1,5 +1,5 @@
-export { default as BellIcon } from "./BellIcon"
 export { default as ChartPieAltIcon } from "./ChartPieAltIcon"
+export { default as BellIcon } from "./BellIcon"
 export { default as CreditCardIcon } from "./CreditCardIcon"
 export { default as HomeIcon } from "./HomeIcon"
 export { default as LikeIcon } from "./LikeIcon"
