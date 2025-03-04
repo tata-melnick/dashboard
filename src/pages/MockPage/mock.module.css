@@ -1,20 +1,24 @@
-.main {
+.mock {
     text-align: center;
     height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 30px 30px 30px 40px;
     overflow-y: scroll;
     background-color: var(--back--color);
+    color: var(--text--color);
 }
 
 ::-webkit-scrollbar {
     height: 3px;
     width: 10px;
-    /*background-color: var(--back--color);*/
+    background-color: var(--back--color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    /*background-color: var(--tab--back);*/
+    background-color: var(--tab--back);
     border-radius: 5px;
-    /*box-shadow: inset 1px 1px 5px var(--text--color);*/
+    box-shadow: inset 1px 1px 5px var(--text--color);
 }

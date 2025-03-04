@@ -1,7 +1,6 @@
 import React from "react"
 import styles from "./menu.module.css"
 import {
-    SearchIcon,
     HomeIcon,
     StatsIcon,
     BellIcon,
@@ -9,60 +8,83 @@ import {
     LikeIcon,
     CreditCardIcon,
 } from "../../icons"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import cn from "classnames-ts"
 
-interface IMenuProps {
-    collapsed: boolean
-}
+const Menu: React.FC = () => {
+    const { pathname } = useLocation()
 
-const Menu: React.FC<IMenuProps> = ({ collapsed }) => {
     return (
         <nav>
-            <ul
-                className={cn(
-                    styles.list,
-                    collapsed && [styles.sidebarCollapsed]
-                )}
-            >
+            <ul className={styles.list}>
                 <li>
-                    <Link to="/" className={styles.tab}>
-                        <SearchIcon />
-                        <span className={styles.tabText}>Поиск...</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/" className={styles.tab}>
+                    <Link
+                        to="/"
+                        className={cn(
+                            styles.tab,
+                            pathname === "/" && styles.active
+                        )}
+                    >
                         <HomeIcon />
                         <span className={styles.tabText}>Главная</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className={styles.tab}>
+                    <Link
+                        to="/stats"
+                        className={cn(
+                            styles.tab,
+                            pathname === "/stats" && styles.active
+                        )}
+                    >
                         <StatsIcon />
                         <span className={styles.tabText}>Доходы</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className={styles.tab}>
+                    <Link
+                        to="/bell"
+                        className={cn(
+                            styles.tab,
+                            pathname === "/bell" && styles.active
+                        )}
+                    >
                         <BellIcon />
                         <span className={styles.tabText}>Уведомления</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className={styles.tab}>
+                    <Link
+                        to="/chart-pie-alt"
+                        className={cn(
+                            styles.tab,
+                            pathname === "/chart-pie-alt" && styles.active
+                        )}
+                    >
                         <ChartPieAltIcon />
                         <span className={styles.tabText}>Аналитика</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className={styles.tab}>
+                    <Link
+                        to="/like"
+                        className={cn(
+                            styles.tab,
+                            pathname === "/like" && styles.active
+                        )}
+                    >
                         <LikeIcon />
                         <span className={styles.tabText}>Избранное</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className={styles.tab}>
+                    <Link
+                        to="/credit-card"
+                        className={cn(
+                            styles.tab,
+                            pathname === "/credit-card" && styles.active
+                        )}
+                    >
                         <CreditCardIcon />
                         <span className={styles.tabText}>Кошелёк</span>
                     </Link>

@@ -14,6 +14,7 @@
     --tab--back: #242526;
     --tab--hover: #3a3b3c;
     --tab--color: #cccccc;
+    --tab--search: #3a3b3c;
     --btn--arrow: #333335;
 
     --checked--active: #dddddd;
@@ -33,10 +34,11 @@
     --tab--back: #ffffff;
     --tab--hover: #455ae0;
     --tab--color: #8f9fad;
+    --tab--search: #ffffff;
     --btn--arrow: #455ae0;
 
     --checked--active: #dddddd;
-    --toggle--back: #ffffff;
+    --toggle--back: #F6F5FF;
     --toggle--beffore: #dddddd;
     --toggle--after: #ffffff;
 }

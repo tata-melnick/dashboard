@@ -6,6 +6,7 @@ import {
     SingInIcon,
     LightThemeIcon,
     DarkThemeIcon,
+    SearchIcon,
 } from "../../../icons"
 import Menu from "../../../components/Menu"
 import { Link } from "react-router-dom"
@@ -32,9 +33,15 @@ const Sidebar: React.FC<ISideBarProps> = ({ changeTheme, theme }) => {
             <button className={styles.arrow} onClick={toggleCollapsed}>
                 <ArrowIcon />
             </button>
-            <Menu collapsed={collapsed} />
+            <div className={styles.container}>
+                <div className={styles.search}>
+                    <SearchIcon />
+                    <span className={styles.searchText}>Поиск...</span>
+                </div>
+                <Menu />
+            </div>
             <div className={styles.wrap}>
-                <Link to="/authorization" className={styles.tab}>
+                <Link to="/" className={styles.tab}>
                     <SingInIcon />
                     <span className={styles.tabText}>Выйти</span>
                 </Link>

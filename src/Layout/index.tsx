@@ -3,10 +3,11 @@ import cn from "classnames-ts"
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import styles from "./layout.module.css"
-import MainPage from "../pages/MainPage"
+// import MainPage from "../pages/MainPage"
+import { Outlet } from "react-router-dom"
 
 const Layout: React.FC = () => {
-    const [theme, setTheme] = useState<"light" | "dark">("dark")
+    const [theme, setTheme] = useState<"light" | "dark">("light")
     const switchTheme = () => {
         setTheme((prev) => (prev === "dark" ? "light" : "dark"))
     }
@@ -16,7 +17,7 @@ const Layout: React.FC = () => {
             <Sidebar changeTheme={switchTheme} theme={theme} />
             <div className={styles.wrap}>
                 <Header />
-                <MainPage theme={theme} />
+                <Outlet />
             </div>
         </div>
     )
