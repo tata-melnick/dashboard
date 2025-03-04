@@ -24,51 +24,27 @@ const UnitEconomics: React.FC<IUnitEconomicsProps> = ({ theme }) => {
                     <SettingsIcon />
                 </div>
             </div>
-            {theme === "light" ? (
-                <div className={styles.widgetsUnit}>
-                    <img
-                        src="/content/lightTheme/widgetUnit_1.png"
-                        alt="Notification"
-                    />
+            <div className={styles.widgetsUnit}>
+                <img
+                    src={`/content/${theme}/widgetUnit_1.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widgetUnit_2.png"
-                        alt="Notification"
-                    />
+                <img
+                    src={`/content/${theme}/widgetUnit_2.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widgetUnit_3.png"
-                        alt="Notification"
-                    />
+                <img
+                    src={`/content/${theme}/widgetUnit_3.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widgetUnit_4.png"
-                        alt="Notification"
-                    />
-                </div>
-            ) : (
-                <div className={styles.widgetsUnit}>
-                    <img
-                        src="/content/darkTheme/widgetUnit_1.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widgetUnit_2.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widgetUnit_3.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widgetUnit_4.png"
-                        alt="Notification"
-                    />
-                </div>
-            )}
+                <img
+                    src={`/content/${theme}/widgetUnit_4.png`}
+                    alt="Notification"
+                />
+            </div>
         </div>
     )
 }

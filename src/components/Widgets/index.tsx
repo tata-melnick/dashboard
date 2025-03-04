@@ -13,72 +13,37 @@ const Widgets: React.FC<IWidgetsProps> = ({ theme }) => {
                 <h2>Виджеты</h2>
                 <SettingsIcon />
             </div>
+            <div className={styles.widgets}>
+                <img
+                    src={`/content/${theme}/widget_1.png`}
+                    alt="Notification"
+                />
 
-            {theme === "light" ? (
-                <div className={styles.widgets}>
-                    <img
-                        src="/content/lightTheme/widget_1.png"
-                        alt="Notification"
-                    />
+                <img
+                    src={`/content/${theme}/widget_2.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widget_2.png"
-                        alt="Notification"
-                    />
+                <img
+                    src={`/content/${theme}/widget_3.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widget_3.png"
-                        alt="Notification"
-                    />
+                <img
+                    src={`/content/${theme}/widget_4.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widget_4.png"
-                        alt="Notification"
-                    />
+                <img
+                    src={`/content/${theme}/widget_5.png`}
+                    alt="Notification"
+                />
 
-                    <img
-                        src="/content/lightTheme/widget_5.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/lightTheme/widget_6.png"
-                        alt="Notification"
-                    />
-                </div>
-            ) : (
-                <div className={styles.widgets}>
-                    <img
-                        src="/content/darkTheme/widget_1.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widget_2.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widget_3.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widget_4.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widget_5.png"
-                        alt="Notification"
-                    />
-
-                    <img
-                        src="/content/darkTheme/widget_6.png"
-                        alt="Notification"
-                    />
-                </div>
-            )}
+                <img
+                    src={`/content/${theme}/widget_6.png`}
+                    alt="Notification"
+                />
+            </div>
         </div>
     )
 }

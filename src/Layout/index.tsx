@@ -3,7 +3,6 @@ import cn from "classnames-ts"
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import styles from "./layout.module.css"
-// import MainPage from "../pages/MainPage"
 import { Outlet } from "react-router-dom"
 
 const Layout: React.FC = () => {
@@ -17,7 +16,7 @@ const Layout: React.FC = () => {
             <Sidebar changeTheme={switchTheme} theme={theme} />
             <div className={styles.wrap}>
                 <Header />
-                <Outlet />
+                <Outlet context={{ theme }} />
             </div>
         </div>
     )
